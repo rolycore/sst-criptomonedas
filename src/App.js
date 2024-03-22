@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styled from '@emotion/styled';
 import axios from 'axios';
 import imagen from './cryptomonedas.png';
+import shalomlogo from "./logo.jpg";
 import Formulario from './components/Formulario';
 import Cotizacion from './components/Cotizacion';
 import Spinner from './components/Spinner';
@@ -14,6 +15,11 @@ const Contenedor = styled.div`
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
+`;
+
+const ShalomLogoImage = styled.img`
+  max-width: 35%;
+  margin-top: 5rem;
 `;
 
 const Imagen = styled.img`
@@ -80,10 +86,18 @@ function App() {
   return (
     <Contenedor>
         <div>
+          
+        <ShalomLogoImage
+           src={shalomlogo}
+           alt="Logo Shalom"
+          />
           <Imagen 
             src={imagen}
             alt="imagen cripto"
+           
           />
+    
+
         </div>
         <div>
             <Heading>Cotiza Criptomonedas al Instante</Heading>
